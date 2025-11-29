@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reyza — Link Hub</title>
+
+<style>
+/* ==== GLOBAL STYLE ==== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at top, #6a11cb, #1c1c1c 60%);
+  overflow:hidden;
+  color:#fff;
+}
+
+/* ==== BACKGROUND ANIMATED ==== */
+.bg-bubble{
+  position:fixed;
+  width:420px;height:420px;
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  filter:blur(120px);
+  opacity:.35;
+  animation:float 8s infinite alternate ease-in-out;
+}
+@keyframes float{
+  from{transform:translate(-120px,-50px);}
+  to{transform:translate(120px,50px);}
+}
+
+/* ==== MAIN CARD ==== */
+.card{
+  width:92%;
+  max-width:460px;
+  background:rgba(255,255,255,0.13);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:26px;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  box-shadow:0 0 35px rgba(0,0,0,.5);
+  animation:fadeIn .9s ease both;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(25px);}}
+
+/* ==== TITLE ==== */
+h1{
+  font-size:26px;
+  text-align:center;
+  font-weight:600;
+  line-height:1.3;
+}
+.nickname{font-size:15px;color:#b9c8ff;margin-top:6px;font-weight:500;}
+
+/* ==== LINKS ==== */
+nav{display:flex;flex-direction:column;gap:14px;width:100%;}
+.btn{
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.25);
+  text-decoration:none;
+  text-align:center;
+  font-weight:600;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,255,255,0.08);
+  transition:.25s ease;
+}
+.btn:hover{
+  transform:translateY(-4px) scale(1.04);
+  background:rgba(255,255,255,0.18);
+  box-shadow:0 0 18px rgba(154,96,255,.65);
+}
+
+/* ==== NEON BORDER EFFECT ==== */
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  padding:2px;
+  background:linear-gradient(120deg,#6a11cb,#ff0080,#2575fc,#6a11cb);
+  background-size:300% 300%;
+  animation:borderGlow 6s ease infinite;
+  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite:exclude;
+}
+@keyframes borderGlow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+footer{text-align:center;font-size:14px;color:#ced8ff8c;margin-top:8px;}
+</style>
+</head>
+
+<body>
+
+<div class="bg-bubble"></div>
+
+<main class="card">
+  <h1>Hallo I'm Reyhan Zada Arsyaka <span class="nickname">(Reyza)</span></h1>
+
+  <nav>
+    <a class="btn" href="https://www.instagram.com/rreyzarsy?igsh=MWFudjlpOWEybjV3Ng==" target="_blank">Instagram — rreyzarsy</a>
+    <a class="btn" href="https://www.instagram.com/rsyzars?igsh=MXBzYnFreDRmY2IwcQ==" target="_blank">Instagram — rsyzars</a>
+    <a class="btn" href="https://www.instagram.com/reyza.arsy.id?igsh=Mnl2ejV0eXp5YzJm" target="_blank">Instagram — Reyza Digital Kreator</a>
+    <a class="btn" href="https://www.instagram.com/reyzaskyline.project?igsh=cjkyN3BqaWt5Yzhr" target="_blank">Instagram — Reyza Skyline Project</a>
+    <a class="btn" href="https://www.tiktok.com/@reyza42025?_r=1&_t=ZS-91oEsrVNImL" target="_blank">TikTok — @reyza42025</a>
+    <a class="btn" href="https://www.tiktok.com/@rzzyahm?_r=1&_t=ZS-91oEux8x2BQ" target="_blank">TikTok — @rzzyahm</a>
+    <a class="btn" href="https://wa.me/6281332621241" target="_blank">WhatsApp — 0813-3262-1241</a>
+  </nav>
+
+  <footer>Made with ❤️</footer>
+</main>
+
+<script>
+// Shortcut keyboard to WhatsApp
+document.addEventListener("keydown",e=>{
+  if(e.key.toLowerCase()==="w") window.open("https://wa.me/6281332621241","_blank");
+});
+</script>
+
+</body>
+</html>
